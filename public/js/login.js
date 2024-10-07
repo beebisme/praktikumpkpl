@@ -40,9 +40,7 @@ form.addEventListener("submit", async (e) => {
       } else if (response.status === 401) {
         showModal("Gagal", "Email atau Password anda salah");
         btnClose.addEventListener("click", () => {
-          window.location.replace(
-            `${window.location.origin}/kepoling/admin/dashboard`
-          );
+          modal.hide();
         });
       } else if (response.status === 200) {
         showModal("Berhasil", "Anda Berhasil Masuk");
