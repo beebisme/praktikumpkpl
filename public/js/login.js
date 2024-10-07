@@ -43,7 +43,7 @@ form.addEventListener("submit", async (e) => {
           modal.hide();
         });
       } else if (response.status === 200) {
-        showModal("Berhasil", "Anda Berhasil Masuk");
+        showModal("Terjadi Kesalahan", "Anda Berhasil Masuk");
         btnClose.addEventListener("click", () => {
           window.location.replace(
             `${window.location.origin}/kepoling/admin/dashboard`
