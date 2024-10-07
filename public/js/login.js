@@ -43,7 +43,8 @@ form.addEventListener("submit", async (e) => {
           window.location.replace(
             `${window.location.origin}/kepoling/admin/dashboard`
           );
-        }); else if (response.status === 200) {
+        });
+      } else if (response.status === 200) {
         showModal("Berhasil", "Anda Berhasil Masuk");
         btnClose.addEventListener("click", () => {
           window.location.replace(
