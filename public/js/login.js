@@ -37,12 +37,7 @@ form.addEventListener("submit", async (e) => {
     }).then((response) => {
       if (response.status === 500) {
         showModal("Terjadi Kesalahan", "Terjadi Kesalahan Di Server");
-      } else if (response.status === 401) {
-        showModal("Gagal", "Email atau Password anda salah");
-        btnClose.addEventListener("click", () => {
-          modal.hide();
-        });
-      } else if (response.status === 200) {
+      }  else if (response.status === 200) {
         showModal("Berhasil", "Anda Berhasil Masuk");
         btnClose.addEventListener("click", () => {
           window.location.replace(
